@@ -63,7 +63,7 @@ const SectionOne = () => {
                 </div>
 
                 <div className=' hidden lg:block' >
-                    <Image src='/section-one-images/section-one-image.png' className=' object-cover' alt='section1' width={1500} height={100} />
+                    <Image src='/section_one_images/section-one-image.png' className=' object-cover' alt='section1' width={1500} height={100} />
                 </div>
             </div>
             <div className='
