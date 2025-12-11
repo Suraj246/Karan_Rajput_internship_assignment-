@@ -4,20 +4,20 @@ const SectionTwoCards = () => {
     const section2Object: { image: string, text1: string, text2: string }[] =
         [
             {
-                image: '/Section2-images/drive.png',
+                image: '/section2-images/drive.png',
                 text1: 'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit',
                 text2: 'adipisicing elit. Quibusdam deleniti Quibusdam  deleniti adipisicing elit. Quibusdam deleniti Quibusdam  deleniti adipisicing elit.' +
                     'Quibusdam deleniti Quibusdam  deleniti adipisicing elit.Quibusdam deleniti Quibusdam '
             },
             {
-                image: '/Section2-images/drive.png',
+                image: '/section2-images/drive.png',
                 text1: 'Lorem ipsum dolor sit amet consectetur',
                 text2: 'adipisicing elit. Quibusdam deleniti Quibusdam  deleniti adipisicing elit. Quibusdam deleniti Quibusdam  deleniti adipisicing elit.' +
                     'Quibusdam deleniti Quibusdam  deleniti adipisicing elit.Quibusdam deleniti Quibusdam '
 
             },
             {
-                image: '/Section2-images/drive.png',
+                image: '/section2-images/drive.png',
                 text1: 'Lorem ipsum dolor sit amet consectetur',
                 text2: 'adipisicing elit. Quibusdam deleniti Quibusdam  deleniti adipisicing elit. Quibusdam deleniti Quibusdam  deleniti adipisicing elit.' +
                     'Quibusdam deleniti Quibusdam  deleniti adipisicing elit.Quibusdam deleniti Quibusdam '
