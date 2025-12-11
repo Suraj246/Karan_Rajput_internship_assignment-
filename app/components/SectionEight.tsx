@@ -44,7 +44,7 @@ const SectionEight = () => {
                     <div className="hidden md:block " >
                         <Image
                             src="/icons.png"
-                            alt="Section Image"
+                            alt="icons"
                             width={400}
                             height={300}
                             className="w-full h-auto object-cover "

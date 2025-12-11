@@ -13,7 +13,7 @@ const BikeLogos = () => {
             { src: "/bikelogos/royal.png", alt: "Royal Enfield" },
             { src: "/bikelogos/yamaha.png", alt: "Yamaha" },
             { src: "/bikelogos/ktm.png", alt: "KTM" },
-            { src: "/bikelogos/ather.png", alt: "Ather" },
+            { src: "/bikelogos/Ather.png", alt: "Ather" },
         ],
         [
             { src: "/bikelogos/Ola.png", alt: "Ola Electric" },
