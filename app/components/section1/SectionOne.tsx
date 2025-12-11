@@ -8,18 +8,18 @@ const SectionOne = () => {
     const section1Object: { image: string, text1: string, text2: string, text3?: string }[] =
         [
             {
-                image: '/Section_one_images/bikeRider.png',
+                image: '/section_one_images/bikeRider.png',
                 text1: 'Lorem ipsum dolor sit amet consectetur',
                 text2: 'adipisicing elit. Quibusdam deleniti Quibusdam  deleniti'
             },
             {
-                image: '/Section_one_images/handshake.png',
+                image: '/section_one_images/handshake.png',
                 text1: 'Lorem ipsum dolor sit amet consectetur',
                 text2: 'Lorem ipsum dolor sit amet consectetur',
                 text3: 'adipisicing elit. Quibusdam deleniti'
             },
             {
-                image: '/Section_one_images/handshake2.png',
+                image: '/section_one_images/handshake2.png',
                 text1: 'Lorem ipsum dolor sit amet consectetur',
                 text2: 'adipisicing elit. Quibusdam deleniti',
                 text3: 'adipisicing elit. Quibusdam deleniti'
@@ -63,7 +63,7 @@ const SectionOne = () => {
                 </div>
 
                 <div className=' hidden lg:block ' >
-                    <Image src={'/Section1-image.png'} className=' object-cover' alt='section1' width={1500} height={100} />
+                    <Image src='/Section1-image.png' className=' object-cover' alt='section1' width={1500} height={100} />
                 </div>
             </div>
             <div className='

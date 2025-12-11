@@ -43,7 +43,7 @@ const Banner = () => {
             </motion.div>
 
             <div className="hidden sm:block w-1/2 h-full bg-cover bg-center">
-                <Image src={"/hero-image.png"} alt="correct"
+                <Image src="/hero-image.png" alt="correct"
                     width={1000} height={700}
                     style={{
                         clipPath: "polygon(26% 0%, 100% 0%, 100% 100%, 0% 100%)",
