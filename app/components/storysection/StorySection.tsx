@@ -1,18 +1,9 @@
 "use client";
-
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import Image from "next/image";
-import Link from "next/link";
-
 import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
     type CarouselApi,
 } from "@/components/ui/carousel"
 import React, { useEffect } from "react";
+import StoryCards from "./StoryCards";
 
 
 const StorySection = () => {
@@ -38,6 +29,7 @@ const StorySection = () => {
             description: "Enim sagittis, sit porttitor morbi lobortis amet, libero adipiscing auctor. Malesuada tristique libero, id netus tincidunt. Egestas ac arcu amet nisi quis est ...",
         },
     ]
+
     const [api, setApi] = React.useState<CarouselApi>()
     const [current, setCurrent] = React.useState(0)
     const [count, setCount] = React.useState(0)
@@ -82,39 +74,7 @@ const StorySection = () => {
                 </div>
 
 
-                <Carousel opts={{ loop: true }} setApi={setApi} >
-                    <CarouselContent>
-                        {storyobj.map((story, index) => (
-                            <CarouselItem key={index}>
-                                <Card className="relative w-full border-0">
-                                    <Image
-                                        src={story.imgSrc}
-                                        alt="Motorcycle Celebration"
-                                        width={800}
-                                        height={400}
-                                        className="w-2xl h-auto object-cover"
-                                    />
-
-                                    <Card className="lg:absolute bottom-[-100] md:right-0 md:bottom-30 md:w-2xl bg-white ">
-                                        <CardHeader>
-                                            <h3 className="text-lg font-semibold">A{story.title}</h3>
-                                        </CardHeader>
-                                        <CardContent className="space-y-3 text-gray-700 text-sm">
-                                            <p>
-                                                {story.description}
-                                            </p>
-                                            <Link href="#" className="text-[#0546D2] font-semibold hover:underline">
-                                                Read Full Story →
-                                            </Link>
-                                        </CardContent>
-                                    </Card>
-                                </Card>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="hidden md:block" />
-                    <CarouselNext className="hidden md:block" />
-                </Carousel>
+                <StoryCards storyobj={storyobj} setApi={setApi} />
 
                 <div className="flex justify-center gap-2 mt-2">
                     {storyobj.map((_, i) => (

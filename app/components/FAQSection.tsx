@@ -45,7 +45,6 @@ export default function FAQSection() {
     return (
         <section className="w-full py-12 mb-22 px-6 md:px-20 bg-[#FBFBFB]">
             <div className="max-w-4xl mx-auto space-y-8">
-                {/* Heading */}
                 <h2 className="text-2xl md:text-4xl font-bold uppercase text-center">
                     Frequently Asked Questions (FAQs)
                 </h2>

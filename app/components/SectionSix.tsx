@@ -5,47 +5,95 @@ import { ArrowRightIcon } from 'lucide-react';
 import Image from 'next/image';
 import { motion } from "framer-motion";
 
-// interface ImageData {
-//     middle: string;
-//     rightGrid: string[];
-//     bottom: string[];
-// }
+// Each image item inside a group
+type ImageItem = {
+    wrapper: string;
+    src: string;
+    width: number;
+    height: number;
+    className: string;
+    alt?: string;
+};
+
+
+type ImageGroup = {
+    layout: string;
+    items: ImageItem[];
+};
 const SectionSix = () => {
 
-    // const images: ImageData = {
-    //     middle: "/section6-images/img-middle.jpg",
-
-    //     rightGrid: [
-    //         "/section6-images/img1.jpg",
-    //         "/section6-images/img2.jpg",
-    //         "/section6-images/img3.jpg",
-    //         "/section6-images/img4.jpg",
-    //     ],
-
-    //     bottom: [
-    //         "/section6-images/img5.jpg",
-    //         "/section6-images/img6.jpg",
-    //     ],
-    // };
+    const bikeImages: ImageGroup[] = [
+        {
+            layout: "flex gap-2 sm:gap-6",
+            items: [
+                {
+                    wrapper: "w-1/4 flex items-end sm:w-1/5",
+                    src: "/section6-images/bike4.png",
+                    width: 200,
+                    height: 200,
+                    className: "w-full object-cover scale-x-[-1]",
+                },
+                {
+                    wrapper: "w-3/4 sm:w-full",
+                    src: "/section6-images/bike5.png",
+                    width: 500,
+                    height: 350,
+                    className: "w-full h-full object-cover scale-x-[-1]",
+                },
+            ],
+        },
+        {
+            layout: "w-full md:h-50",
+            items: [
+                {
+                    wrapper: "w-full h-full",
+                    src: "/section6-images/bike6.png",
+                    width: 700,
+                    height: 400,
+                    className: "w-full h-full object-cover",
+                },
+            ],
+        },
+        {
+            layout: "flex gap-2 sm:gap-6",
+            items: [
+                {
+                    wrapper: "w-1/4 h-22.5 sm:w-1/5",
+                    src: "/section6-images/bike6.png",
+                    width: 200,
+                    height: 200,
+                    className: "w-full h-full object-cover scale-x-[-1]",
+                },
+                {
+                    wrapper: "w-3/4 h-22.5 sm:w-full",
+                    src: "/section6-images/bike7.png",
+                    width: 500,
+                    height: 300,
+                    className: "w-full h-full object-cover scale-x-[-1]",
+                },
+            ],
+        },
+    ];
+    ;
     return (
 
-        <div
-            className="w-full min-h-screen bg-no-repeat overflow-hidden"
-            style={{
-                backgroundImage: "url('/section4-images/Capa 1.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                transform: "scaleX(-1)",
-            }}
-        >
-            <div style={{ transform: "scaleX(-1)" }}>
+        <div className="relative w-full min-h-screen overflow-hidden">
+            <Image
+                src="/section4-images/Capa 1.png"
+                alt="Background"
+                fill
+                className="object-cover object-center scale-x-[-1]"
+                priority={false}
+            />
+
+            <div className="relative z-10">
 
                 <div className="w-full">
 
                     <div className=" mt-30 md:p-20 bg-[#F1F5F9] flex flex-col md:flex-row justify-between items-start gap-10  mx-auto">
 
 
-                        <div className="flex flex-col gap-12">
+                        <div className="flex flex-col gap-15">
                             <div className="flex flex-col sm:flex-row gap-5">
 
                                 <motion.div
@@ -104,61 +152,23 @@ const SectionSix = () => {
                             </div>
                         </div>
 
-
                         <div className="w-full md:max-w-xl flex flex-col gap-6">
-
-                            <div className="flex gap-2 sm:gap-6">
-                                <div className="w-1/4 flex items-end sm:w-1/5">
-                                    <Image
-                                        src="/section6-images/bike4.png"
-                                        alt="bike"
-                                        width={200}
-                                        height={200}
-                                        className="w-full object-cover scale-x-[-1]"
-                                    />
+                            {bikeImages.map((group, idx) => (
+                                <div key={idx} className={group.layout}>
+                                    {group.items.map((img, i) => (
+                                        <div key={i} className={img.wrapper}>
+                                            <Image
+                                                src={img.src}
+                                                alt="bike"
+                                                width={img.width}
+                                                height={img.height}
+                                                className={img.className}
+                                            />
+                                        </div>
+                                    ))}
                                 </div>
-                                <div className="w-3/4 sm:w-full">
-                                    <Image
-                                        src="/section6-images/bike5.png"
-                                        alt="bike"
-                                        width={500}
-                                        height={350}
-                                        className="w-full h-full object-cover scale-x-[-1]"
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="w-full md:h-50">
-                                <Image
-                                    src="/section6-images/bike6.png"
-                                    alt="bike"
-                                    width={700}
-                                    height={400}
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <div className="flex gap-2 sm:gap-6">
-                                <div className="w-1/4 h-22.5 sm:w-1/5">
-                                    <Image
-                                        src="/section6-images/bike6.png"
-                                        alt="bike"
-                                        width={200}
-                                        height={200}
-                                        className="w-full h-full object-cover scale-x-[-1]"
-                                    />
-                                </div>
-                                <div className="w-3/4 h-22.5 sm:w-full">
-                                    <Image
-                                        src="/section6-images/bike7.png"
-                                        alt="bike"
-                                        width={500}
-                                        height={300}
-                                        className="w-full h-full object-cover scale-x-[-1]"
-                                    />
-                                </div>
-                            </div>
+                            ))}
                         </div>
-
                     </div>
                 </div>
             </div>

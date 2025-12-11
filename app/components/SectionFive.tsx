@@ -1,16 +1,17 @@
 
 "use client"
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const SectionFive = () => {
     return (
         <div className="relative mt-40 mb-12 w-full h-[600px] overflow-hidden text-white">
-            <div
-                className="absolute  inset-0 bg-cover bg-center"
-                style={{
-                    backgroundImage: "url('/bgcomputer.png')",
-                }}
-            />
+
+            <Image src="/bgcomputer.png"
+                className="absolute inset-0 w-full h-full object-cover"
+                width={1000}
+                height={500}
+                alt="Overlay" />
 
             <motion.div
                 initial={{ opacity: 0, y: 100 }}

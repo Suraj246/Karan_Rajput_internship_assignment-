@@ -42,18 +42,16 @@ const Banner = () => {
                 </div>
             </motion.div>
 
-            <div
+            <div className="hidden sm:block w-1/2 h-full bg-cover bg-center">
+                <Image src={"/hero-image.png"} alt="correct"
+                    width={1000} height={700}
+                    style={{
+                        clipPath: "polygon(26% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                    }}
+                    className="w-full h-full   mask-b-from-88% mask-b-to-90%"
 
-                className="hidden sm:block w-1/2 h-full bg-cover bg-center
-             mask-b-from-88% mask-b-to-90%
-                "
-                style={{
-                    backgroundImage: "url('/hero-image.png')",
-                    clipPath: "polygon(26% 0%, 100% 0%, 100% 100%, 0% 100%)",
-                }}
-
-            />
-
+                />
+            </div>
         </div>
     )
 }

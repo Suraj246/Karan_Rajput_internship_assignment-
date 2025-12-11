@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button'
 import { ArrowRightIcon } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
+import SectionOneCards from './SectionOneCards'
 
 const SectionOne = () => {
     const section1Object: { image: string, text1: string, text2: string, text3?: string }[] =
@@ -43,20 +44,7 @@ const SectionOne = () => {
                     <div className='flex flex-col gap-4 mt-4 p-2'>
                         {section1Object.map((item, idx) => {
                             return (
-                                <div key={idx} className='flex flex-col sm:flex-row gap-8 items-center '>
-                                    <div className='w-full h-40 sm:w-40'>
-                                        <Image src={item.image}
-                                            alt='section1'
-                                            width={100} height={100}
-                                            className='h-full w-full object-cover'
-                                        />
-                                    </div>
-                                    <div>
-                                        <span className='md:text-[18px]'>{item.text1}</span><br />
-                                        <span className='md:text-[18px]'>{item.text2}</span><br />
-                                        <span className='md:text-[18px]'>{item.text3}</span>
-                                    </div>
-                                </div>
+                                <SectionOneCards key={idx} item={item} />
                             )
                         })}
 
